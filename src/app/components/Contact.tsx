@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import {
   FiArrowUpRight,
   FiSend,
@@ -17,6 +17,9 @@ export const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<"success" | "error" | null>(null);
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -71,11 +74,16 @@ export const Contact = () => {
   ];
 
   return (
-    <section className="py-24 bg-black" id="contact">
+    <section ref={ref} className="py-24 bg-black" id="contact">
       <div className="w-full max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           {/* Left Column: Simple Text */}
-          <div className="space-y-8">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="space-y-8"
+          >
             <h2 className="text-4xl md:text-6xl font-bold font-display tracking-tight text-white leading-tight">
               Turning "What If" <br />
               <span className="text-gray-500">into "What's Next"</span>
@@ -112,10 +120,14 @@ export const Contact = () => {
                 <FiArrowUpRight />
               </a>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column: Clean Form */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          >
             <form ref={form} onSubmit={sendEmail} className="space-y-8">
               <div className="space-y-6">
                 <div>
@@ -203,7 +215,7 @@ export const Contact = () => {
                 </AnimatePresence>
               </div>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

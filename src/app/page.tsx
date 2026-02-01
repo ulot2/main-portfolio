@@ -3,15 +3,24 @@ import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
 import About from "./components/About";
 import { Contact } from "./components/Contact";
+import FadeInSection from "./components/FadeInSection";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-black text-white">
       <Hero />
-      <TechStack />
-      <Projects />
-      <About />
-      <Contact />
+      <FadeInSection>
+        <TechStack />
+      </FadeInSection>
+      <FadeInSection>
+        <Projects />
+      </FadeInSection>
+      <FadeInSection>
+        <About />
+      </FadeInSection>
+      <FadeInSection>
+        <Contact />
+      </FadeInSection>
     </main>
   );
 }
