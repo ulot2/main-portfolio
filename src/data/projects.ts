@@ -9,6 +9,8 @@ export interface Project {
   technologies: string[];
   liveUrl: string;
   githubUrl: string;
+  category: string;
+  features: string[];
 }
 
 export const projects: Project[] = [
@@ -25,6 +27,12 @@ export const projects: Project[] = [
     technologies: ["Next.js", "Prisma", "Tailwind CSS", "motion/react"],
     liveUrl: "https://prompt-nest-eta.vercel.app/",
     githubUrl: "https://github.com/ulot2/portfolio-new.git",
+    category: "AI Prompt Library",
+    features: [
+      "Community-driven prompt sharing",
+      "Curated & verified collection",
+      "User-friendly organization tools",
+    ],
   },
   {
     id: 2,
@@ -39,6 +47,12 @@ export const projects: Project[] = [
     technologies: ["Next.js", "Tailwind CSS", "Google Books API", "Groq AI"],
     liveUrl: "https://biblioquest-gilt.vercel.app/",
     githubUrl: "https://github.com/ulot2/biblio-quest.git",
+    category: "Interactive Storytelling",
+    features: [
+      "AI-generated infinite narratives",
+      "Dynamic choices & consequences",
+      "Immersive text-based interface",
+    ],
   },
   {
     id: 3,
@@ -53,6 +67,12 @@ export const projects: Project[] = [
     technologies: ["Nextjs", "Tailwind CSS"],
     liveUrl: "https://ville-dishes.vercel.app/",
     githubUrl: "https://github.com/ulot2/ville-dishes.git",
+    category: "Restaurant Landing Page",
+    features: [
+      "Mouth-watering menu showcase",
+      "Smooth scroll animations",
+      "Responsive mobile-first design",
+    ],
   },
 
   {
@@ -68,6 +88,12 @@ export const projects: Project[] = [
     technologies: ["Next.js", "motion/react", "Tailwind CSS"],
     liveUrl: "https://thrive-forge.vercel.app/",
     githubUrl: "https://github.com/ulot2/Browser-Extensions.git",
+    category: "Agency Landing Page",
+    features: [
+      "High-performance animations",
+      "Conversion-focused layout",
+      "Multi-tier pricing system",
+    ],
   },
 
   {
@@ -83,6 +109,12 @@ export const projects: Project[] = [
     technologies: ["React", "CSS", "OpenWeather API"],
     liveUrl: "https://weather-app-tolu.vercel.app/",
     githubUrl: "https://github.com/ulot2/weather-app.git",
+    category: "Utility Tool",
+    features: [
+      "Real-time weather data",
+      "Global city search",
+      "Detailed hourly forecasts",
+    ],
   },
 
   {
@@ -97,6 +129,12 @@ export const projects: Project[] = [
     technologies: ["React", "CSS"],
     liveUrl: "https://the-b2-foundation2.vercel.app/",
     githubUrl: "https://github.com/ulot2/the-b2-foundation.git",
+    category: "Non-Profit Website",
+    features: [
+      "Clean & accessible design",
+      "Community engagement focus",
+      "Mobile-responsive layout",
+    ],
   },
   {
     id: 7,
@@ -111,5 +149,11 @@ export const projects: Project[] = [
     technologies: ["React", "CSS"],
     liveUrl: "https://age-calculator-ulot2.vercel.app/",
     githubUrl: "https://github.com/ulot2/age-calculator.git",
+    category: "Utility Tool",
+    features: [
+      "Precise age calculation",
+      "Robust input validation",
+      "Minimalist responsive UI",
+    ],
   },
 ];

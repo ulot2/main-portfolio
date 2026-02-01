@@ -17,9 +17,9 @@ export default function TechStack() {
 
       <div className="relative flex w-full max-w-7xl overflow-hidden">
         {/* Left Fade */}
-        <div className="absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-black to-transparent"></div>
+        <div className="absolute left-0 top-0 z-10 h-full w-24 bg-linear-to-r from-black to-transparent"></div>
         {/* Right Fade */}
-        <div className="absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-black to-transparent"></div>
+        <div className="absolute right-0 top-0 z-10 h-full w-24 bg-linear-to-l from-black to-transparent"></div>
 
         <div className="flex animate-[marquee_30s_linear_infinite] whitespace-nowrap">
           {/* Double the list to create seamless loop */}

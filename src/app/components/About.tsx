@@ -22,10 +22,10 @@ export default function About() {
               design and engineering.
             </p>
             <p>
-              My philosophy is simple:{" "}
-              <strong className="text-white">User experience first</strong>.
-              Whether I'm optimizing a render loop or refining a
-              micro-interaction, my goal is always to create software that feels
+              I put{" "}
+              <strong className="text-white">user experience first</strong> at
+              the center of everything I build. Whether improving performance or
+              fine-tuning interactions, my aim is to create software that feels
               seamless and intuitive.
             </p>
           </div>
