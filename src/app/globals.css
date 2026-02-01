@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
 :root {
+  /* Creating a palette for 'Creative Portfolio' */
+  --color-electric-blue: #2563eb; /* A bright blue for CTAs */
+  --color-neon-purple: #a855f7; /* A vibrant purple for accents */
+  --color-oled-black: #000000; /* True black */
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-glass-bg: rgba(255, 255, 255, 0.05);
+
   --background: #ffffff;
   --foreground: #171717;
 }
 
+/* @theme block for Tailwind v4 custom theme extensions */
 @theme inline {
+  --color-pro-bg: #0f172a;
+  --color-pro-text: #f8fafc;
+  --color-pro-cta: #22c55e;
+  --color-pro-cta-hover: #16a34a;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-electric-blue: var(--color-electric-blue);
+  --color-neon-purple: var(--color-neon-purple);
+  --color-oled-black: var(--color-oled-black);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-archivo);
+  --font-body: var(--font-space);
+
+  /* Animation Keyframes */
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  --animate-marquee: marquee 25s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000; /* OLED Black */
     --foreground: #ededed;
   }
 }
 
+/* Base Styles */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll from animations */
+}
+
+/* Utilities */
+@utility glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@utility text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    to right,
+    var(--color-electric-blue),
+    var(--color-neon-purple)
+  );
 }
