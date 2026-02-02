@@ -38,8 +38,9 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         className="mt-8 max-w-2xl text-lg text-gray-400 sm:text-xl leading-relaxed relative z-10"
       >
-        Frontend Developer specializing in high-performance web applications,
-        modern UI/UX, and clean, scalable code.
+        I'm Toluwalope Adegoke, a Frontend Developer specializing in
+        high-performance web applications, modern UI/UX, and clean, scalable
+        code.
       </motion.p>
 
       <motion.div

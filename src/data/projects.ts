@@ -86,7 +86,7 @@ export const projects: Project[] = [
     image2: "/images/thrive-1.png",
     image3: "/images/thrive-2.png",
     technologies: ["Next.js", "motion/react", "Tailwind CSS"],
-    liveUrl: "https://thrive-forge.vercel.app/",
+    liveUrl: "https://www.thriveforge.site/",
     githubUrl: "https://github.com/ulot2/Browser-Extensions.git",
     category: "Agency Landing Page",
     features: [

@@ -58,7 +58,7 @@ export const Contact = () => {
   const socialLinks = [
     {
       name: "LinkedIn",
-      href: "https://www.linkedin.com/in/toluwalope-adegoke-b441b9380",
+      href: "https://linkedin.com/in/tnuell",
       icon: <LuLinkedin />,
     },
     {
